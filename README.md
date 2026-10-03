@@ -43,6 +43,31 @@ Estimated forest-cover reduction:
 - **NDVI:** 8.13%
 - **CNN:** 7.95%
 
+## Setup
+
+This project uses **Python 3.12** and [`uv`](https://docs.astral.sh/uv/).
+
+Install dependencies:
+
+```bash
+# CPU
+uv sync --python 3.12 --extra cpu
+
+# or CUDA 12.4
+uv sync --python 3.12 --extra cuda124
+```
+
+Start Jupyter Lab:
+
+```bash
+uv run --extra cpu jupyter lab
+
+# for CUDA
+uv run --extra cuda124 jupyter lab
+```
+
+Run the notebooks in order.
+
 ## Tech Stack
 
 Python, PyTorch, PyTorch Lightning, NumPy, Rasterio, GeoPandas, Matplotlib, Copernicus Data Space API
